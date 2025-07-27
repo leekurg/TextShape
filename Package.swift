@@ -5,19 +5,20 @@ import PackageDescription
 
 let package = Package(
     name: "TextShape",
-    platforms: [.iOS(.v16)],
+    platforms: [.iOS(.v16), .macOS(.v13)],
     products: [
         .library(
             name: "TextShape",
             targets: ["TextShape"]
         )
     ],
+    dependencies: [
+        .package(url: "https://github.com/leekurg/EPath", from: "1.0.0")
+    ],
     targets: [
         .target(
-            name: "TextShape"),
-        .testTarget(
-            name: "TextShapeTests",
-            dependencies: ["TextShape"]
+            name: "TextShape",
+            dependencies: ["EPath"]
         )
     ]
 )
