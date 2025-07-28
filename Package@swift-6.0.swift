@@ -13,7 +13,7 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/leekurg/EPath", branch: "swift-tools")
+        .package(url: "https://github.com/leekurg/EPath", from: "1.0.0")
     ],
     targets: [
         .target(
